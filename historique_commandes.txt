@@ -1,0 +1,11 @@
+# Historique des commandes TP A1
+
+docker build -t rose-flask-app .
+docker images
+docker rm rose-conteneur
+docker build -t rose-flask-app .
+docker run -d -p 5000:5000 --name rose-conteneur rose-flask-app
+docker ps
+docker login -u kuete
+docker tag rose-flask-app kuete/rose-flask-app
+docker push kuete/rose-flask-app
